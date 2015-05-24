@@ -86,8 +86,7 @@ cacheSolve <- function(x=matrix(), ...) {
 ## run program to test. Note: my work directory is one level up to "ProgrammingAssignment2" folder
 
 ## > source("ProgrammingAssignment2/cachematrix.R")    load R functions
-## > b <- matrix(1:4, 2, 2)  create a matrix, 2 by 2
-## > a <- makeCacheMatrix(b) create function
+## > a <- makeCacheMatrix(matrix(1:4, 2, 2)) create function with 2 by 2 matrix
 ## > cacheSolve(a) 
 ## result:
 ##       [,1] [,2]
@@ -95,24 +94,21 @@ cacheSolve <- function(x=matrix(), ...) {
 ## [2,]    1 -0.5
 
 ## run another one
-## > b <- matrix(5:10, 3, 2)  create a matrix
-## > a <- makeCacheMatrix(b)  create functions
+## > a <- makeCacheMatrix(matrix(5:10, 3, 2))  create functions with 3 by 2 matrix
 ## > cacheSolve(a)   
 ## got error:  Error in solve.default(matrix, ...) : 'a' (3 x 2) must be square 
 
 ## run another one, 3 by 3
-## > b <- matrix( c(1, 2, 3, 0, 1, 4, 5, 6, 0), nrow=3, ncol=3)
-## > a <- makeCacheMatrix(b)  create functions
+## > a <- makeCacheMatrix(matrix( c(1, 2, 3, 0, 1, 4, 5, 6, 0), nrow=3, ncol=3))  create functions with 3 by 3 matrix
 ## > cacheSolve(a)  
 ## result:
-##       [,1] [,2] [,3]
-## [1,]    1    0    5
-## [2,]    2    1    6
-## [3,]    3    4    0
+##      [,1] [,2] [,3]
+##[1,]  -24   20   -5
+##[2,]   18  -15    4
+##[3,]    5   -4    1
 
 ## run another one, 4 by 4
-## > b <- matrix( c(3, 1, 4, 5, 0, 2, 0, 0, 2, 0, 6, 2, -1, -2, -3, 0), nrow=4, ncol=4)
-## > a <- makeCacheMatrix(b)  create functions
+## > a <- makeCacheMatrix(matrix( c(3, 1, 4, 5, 0, 2, 0, 0, 2, 0, 6, 2, -1, -2, -3, 0), nrow=4, ncol=4))  create functions with 4 by 4 matrix
 ## > cacheSolve(a)  
 ## result:
 ##      [,1] [,2] [,3] [,4]
